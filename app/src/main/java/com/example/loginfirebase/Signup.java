@@ -17,9 +17,9 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class Signup extends AppCompatActivity {
-    EditText name,email,pass,phone,pass_repeat;
+    EditText name,email,pass,pass_repeat;
     FirebaseAuth firebaseAuth;
-    Button signupButton;
+    Button cont;
 
 
     @Override
@@ -31,12 +31,11 @@ public class Signup extends AppCompatActivity {
         email = findViewById(R.id.email);
         pass = findViewById(R.id.password);
         pass_repeat = findViewById(R.id.password2);
-        phone = findViewById(R.id.PhoneNo);
-        signupButton = findViewById(R.id.button);
+        cont = findViewById(R.id.button);
 
         firebaseAuth = FirebaseAuth.getInstance();
 
-        signupButton.setOnClickListener(new View.OnClickListener() {
+        cont.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String semail = email.getText().toString().trim();
@@ -64,16 +63,14 @@ public class Signup extends AppCompatActivity {
                     return;
                 }
 
-
                 //Registering user in firebase
 
                 firebaseAuth.createUserWithEmailAndPassword(semail,spass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-                        if(task.isSuccessful())
-                        {
-                            Toast.makeText(Signup.this,"User Created",Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(getApplicationContext(),Login.class));
+                        if(task.isSuccessful()) {
+                            Toast.makeText(Signup.this,"Account Created", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(getApplicationContext(), Login.class));
                         }
                         else
                         {

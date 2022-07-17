@@ -73,29 +73,9 @@
         android:textColor="#FFFFFF"
         android:textColorHint="#A89C9C"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.652"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password"
         tools:ignore="HardcodedText,TextContrastCheck" />
-
-    <EditText
-        android:id="@+id/PhoneNo"
-        android:layout_width="388dp"
-        android:layout_height="58dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="5dp"
-        android:ems="10"
-        android:hint="Enter Phone Number"
-        android:inputType="phone"
-        android:padding="10dp"
-        android:textColor="#FFFFFF"
-        android:textColorHint="#A89C9C"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.652"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email"
-        tools:ignore="TextContrastCheck" />
 
     <EditText
         android:id="@+id/email"
@@ -111,7 +91,6 @@
         android:textColor="#FFFFFF"
         android:textColorHint="#A89C9C"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.652"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/FullName"
         tools:ignore="TextContrastCheck" />
@@ -130,9 +109,8 @@
         android:textColor="#FFFFFF"
         android:textColorHint="#A89C9C"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/PhoneNo"
+        app:layout_constraintTop_toBottomOf="@+id/email"
         tools:ignore="TextContrastCheck" />
 
     <Button
@@ -141,7 +119,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Create Account"
+        android:text="Continue"
         android:textAllCaps="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
